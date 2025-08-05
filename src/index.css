@@ -1,68 +1,80 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
+/*
+  Define the 'GT Walsheim Trial' font family.
+  All variations will share this name. The browser will pick the
+  right file based on the font-weight and font-style we ask for.
+*/
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* --- Normal Styles --- */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+    font-family: "GT Walsheim Trial";
+    src: url("./assets/fonts/GT-Walsheim-Ultra-Light-Trial-BF651b7fc72b236.woff")
+        format("woff");
+    font-weight: 200; /* Ultra-Light */
+    font-style: normal;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@font-face {
+    font-family: "GT Walsheim Trial";
+    src: url("./assets/fonts/GT-Walsheim-Thin-Trial-BF651b7fc728c4c.woff")
+        format("woff");
+    font-weight: 300; /* Thin / Light */
+    font-style: normal;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@font-face {
+    font-family: "GT Walsheim Trial";
+    src: url("./assets/fonts/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.woff")
+        format("woff");
+    font-weight: 400; /* Regular */
+    font-style: normal;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@font-face {
+    font-family: "GT Walsheim Trial";
+    src: url("./assets/fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.woff")
+        format("woff");
+    font-weight: 500; /* Medium */
+    font-style: normal;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@font-face {
+    font-family: "GT Walsheim Trial";
+    src: url("./assets/fonts/GT-Walsheim-Bold-Trial-BF651b7fc737c57.woff")
+        format("woff");
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GT Walsheim Trial";
+    src: url("./assets/fonts/GT-Walsheim-Black-Trial-BF651b7fc736a5b.woff")
+        format("woff");
+    font-weight: 900; /* Black / Heavy */
+    font-style: normal;
+}
+
+/* --- Italic (Oblique) Styles --- */
+
+@font-face {
+    font-family: "GT Walsheim Trial";
+    src: url("./assets/fonts/GT-Walsheim-Regular-Oblique-Trial-BF651b7fc67342f.woff")
+        format("woff");
+    font-weight: 400; /* Regular Italic */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "GT Walsheim Trial";
+    src: url("./assets/fonts/GT-Walsheim-Bold-Oblique-Trial-BF651b7fc5f06a0.woff")
+        format("woff");
+    font-weight: 700; /* Bold Italic */
+    font-style: italic;
+}
+
+@theme {
+    --font-walsheim: "GT Walsheim Trial", sans-serif;
+    --color-brand-dark-green: "#0D4036";
+    --color-brand-lime: "#CCED60";
 }
