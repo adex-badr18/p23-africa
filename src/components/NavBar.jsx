@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import {
-    LinkedIn,
-    Facebook,
-    Instagram,
-    Youtube,
+    LinkedInIcon,
+    FacebookIcon,
+    InstagramIcon,
+    YouTubeIcon,
     Hamburger,
     CloseIcon,
 } from "./Icons";
@@ -24,11 +24,11 @@ const socialIcons = [
         id: 1,
         name: "linkedin",
         url: "#",
-        icon: <LinkedIn bgColor="#FFFFFF" className="text-white" />,
+        icon: LinkedInIcon,
     },
-    { id: 2, name: "facebook", url: "#", icon: <Facebook className="" /> },
-    { id: 3, name: "instagram", url: "#", icon: <Instagram className="" /> },
-    { id: 4, name: "youtube", url: "#", icon: <Youtube className="" /> },
+    { id: 2, name: "facebook", url: "#", icon: FacebookIcon },
+    { id: 3, name: "instagram", url: "#", icon: InstagramIcon },
+    { id: 4, name: "youtube", url: "#", icon: YouTubeIcon },
 ];
 
 const NavBar = () => {
@@ -67,12 +67,14 @@ const NavBar = () => {
 
                     <div className="flex items-center gap-4">
                         {socialIcons.map((social) => (
-                            <div
+                            <Link
                                 key={social.id}
-                                className="w-5 h-5 bg-white rounded-full flex items-center justify-center text-[#0D4036]"
+                                href={social.href}
+                                aria-label={social.name}
+                                className="text-white hover:text-white transition-colors"
                             >
-                                {social.icon}
-                            </div>
+                                <social.icon className="w-5 h-5" />
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -116,14 +118,19 @@ const NavBar = () => {
                         ))}
                     </ul>
 
-                    <button className="w-full mt-4 border border-white text-white px-6 py-2 rounded-lg text-sm font-normal">
+                    <LinkButton variant="text" href="#" className="">
                         Subscribe
-                    </button>
+                    </LinkButton>
 
                     <div className="flex gap-4 mt-4">
                         {socialIcons.map((social) => (
-                            <Link key={social.id} to={social.url}>
-                                {social.icon}
+                            <Link
+                                key={social.id}
+                                href={social.href}
+                                aria-label={social.name}
+                                className="text-white hover:text-white transition-colors"
+                            >
+                                <social.icon className="w-5 h-5" />
                             </Link>
                         ))}
                     </div>

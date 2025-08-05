@@ -39,26 +39,7 @@ const Footer = () => {
         },
     };
 
-    return (
-        // <footer className="bg-brand-dark-green">
-        //     <div className="container mx-auto">
-        //         <div className="grid grid-cols-1 text-white font-walsheim">
-        //             <div className="flex flex-col gap-8 flex-1">
-        //                 <Logo width="w-[100px]" />
-
-        //                 <p className="tracking-[0.5px] leading-6">
-        //                     P23 Africa LTD is registered in the United Kingdom.
-        //                     Company No: 15246700
-        //                 </p>
-        //             </div>
-
-        //             <div className="">
-        //                 h
-        //             </div>
-        //         </div>
-        //     </div>
-        // </footer>
-
+    return (        
         <footer className="bg-[#0D4036] w-full p-8 sm:p-16 font-walsheim">
             <div className="container mx-auto flex flex-col md:flex-row justify-between gap-12">
                 <div className="flex flex-col gap-8 flex-1">
