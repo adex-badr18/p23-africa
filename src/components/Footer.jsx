@@ -2,7 +2,12 @@ import React from "react";
 import Logo from "./Logo";
 import { Link } from "react-router";
 import LinkButton from "./LinkButton";
-import { LinkedInIcon, FacebookIcon, InstagramIcon, YouTubeIcon } from "./Icons";
+import {
+    LinkedInIcon,
+    FacebookIcon,
+    InstagramIcon,
+    YouTubeIcon,
+} from "./Icons";
 
 const Footer = () => {
     const footerData = {
@@ -39,9 +44,9 @@ const Footer = () => {
         },
     };
 
-    return (        
-        <footer className="bg-[#0D4036] w-full p-8 sm:p-16 font-walsheim">
-            <div className="container mx-auto flex flex-col md:flex-row justify-between gap-12">
+    return (
+        <footer className="bg-[#0D4036] w-full">
+            <div className="container mx-auto p-8 md:p-16 font-walsheim flex flex-col md:flex-row flex-wrap justify-between gap-12">
                 <div className="flex flex-col gap-8 flex-1">
                     <Logo width="w-[100px]" />
 
@@ -110,10 +115,27 @@ const Footer = () => {
                         />
                     </form>
 
-                    <LinkButton href="#" variant="accent" icon className="self-start">
+                    <LinkButton
+                        href="#"
+                        variant="accent"
+                        icon
+                        className="self-start"
+                    >
                         Subscribe
                     </LinkButton>
                 </div>
+            </div>
+
+            <div className="container mx-auto py-4 px-8 md:px-16 flex items-center justify-end gap-[7px] font-georgia text-base text-white">
+                <span className="">©P23 Africa 2025</span>
+                <span className="hidden md:inline-flex">•</span>
+                <Link to="#" className="hidden md:inline-flex">
+                    Privacy Policy
+                </Link>
+                <span className="hidden md:inline-flex">•</span>
+                <Link to="#" className="hidden md:inline-flex">
+                    Terms & Conditions
+                </Link>
             </div>
         </footer>
     );

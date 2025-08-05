@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 /* --- Normal Styles --- */
@@ -69,9 +69,32 @@
     font-style: italic;
 }
 
+/* Georgia Font */
+@font-face {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: normal;
+    src: url("./assets/fonts/georgia.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Georgia";
+    font-style: italic;
+    font-weight: normal;
+    src: url("./assets/fonts/georgiai.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/georgiab.woff") format("woff");
+}
+
 @theme {
     --font-walsheim: "GT Walsheim Trial", sans-serif;
     --font-montserrat: "Montserrat", sans-serif;
+    --font-georgia: "Georgia", sans-serif;
     --color-brand-dark-green: "#0D4036";
     --color-brand-lime: "#CCED60";
 }
