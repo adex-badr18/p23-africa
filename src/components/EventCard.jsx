@@ -65,7 +65,7 @@ const EventCard = ({
             </p>
 
             {/* Card Footer */}
-            <div className="flex flex-col sm:flex-row items-center justify-between w-full mt-4 gap-4">
+            <div className="flex flex-wrap items-center justify-between w-full mt-4 gap-4">
                 <Link
                     to={buttonUrl}
                     className={`flex flex-row justify-center items-center gap-3  py-2.5 px-4 rounded-lg border transition-colors duration-300
