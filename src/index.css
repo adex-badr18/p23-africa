@@ -1,9 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-/*
-  Define the 'GT Walsheim Trial' font family.
-  All variations will share this name. The browser will pick the
-  right file based on the font-weight and font-style we ask for.
-*/
 
 /* --- Normal Styles --- */
 
@@ -75,6 +71,7 @@
 
 @theme {
     --font-walsheim: "GT Walsheim Trial", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
     --color-brand-dark-green: "#0D4036";
     --color-brand-lime: "#CCED60";
 }

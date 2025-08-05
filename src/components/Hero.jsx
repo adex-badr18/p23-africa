@@ -4,55 +4,91 @@ import heroImgDesktop from "../assets/hero-img-desktop.png";
 import heroBgMobile from "../assets/hero-bg-mobile.png";
 import heroPatternMobile from "../assets/hero-pattern-mobile.png";
 import heroImgMobile from "../assets/hero-img-mobile.png";
+import gradient from "../assets/hero-gradient.png";
 
 const Hero = () => {
     return (
-        <div
-            className={`min-h-screen bg-white bg-no-repeat bg-cover py-10 md:py-20`}
+        <section
+            className={`min-h-screen w-full overflow-hidden font-walsheim bg-white bg-no-repeat bg-cover`}
             style={{ backgroundImage: `url(${heroBgDesktop})` }}
         >
-            <div className="container mx-auto hidden md:flex justify-center gap-5">
-                <div className="w-[513px] h-[686px]">
-                    <img src={heroPatternDesktop} className="" alt="Brand pattern" />
-                </div>
+            {/* Desktop */}
+            <div className="container mx-auto hidden md:flex py-10 md:py-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16 lg:gap-8">
+                    {/* Graphics Pattern */}
+                    <div className="hidden md:flex justify-center items-center">
+                        <img
+                            src={heroPatternDesktop}
+                            className="w-full max-w-md h-auto object-contain"
+                            alt="Decorative graphic pattern"
+                        />
+                    </div>
 
-                <div className="flex flex-col flex-1">
-                    <h2 className="font-montserrat text-[45px] leading-[45px] lg:text-[65px] lg:leading-[75px] flex flex-col tracking-[0.5px] text-[#0D4036]">
-                        <span className="font-extrabold">
-                            Gaining Knowledge
-                        </span>
-                        <span className="">Through Connection</span>
-                    </h2>
-                    <div
-                        className={`relative w-full h-[496.77px] bg-transparent bg-cover bg-center`}
-                        style={{backgroundImage: `url(${heroImgDesktop})`}}
-                    >
-                        <div className="absolute w-[635.09px] h-[133.71px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#51D790] to-[#2CBC70] blur-[100px] rotate-[32.96deg]"></div>
+                    {/* Right Column */}
+                    <div className="relative flex flex-col items-start text-left">
+                        {/* <div
+                            className="absolute top-40 right-20 lg:right-60 w-[500px] h-[500px] lg:w-[600px] lg:h-[500px] bg-green-900 rounded-full blur-xl"
+                            style={{
+                                background:
+                                    "radial-gradient(circle, rgba(204,237,96,0.2) 0%, rgba(204,237,96,0) 60%)",
+                            }}
+                        ></div> */}
+
+                        <h1 className="font-montserrat text-4xl lg:text-5xl leading-tig flex flex-col tracking-[0.5px] text-[#0D4036]">
+                            <span className="font-extrabold">
+                                Gaining Knowledge
+                            </span>
+                            <span className="">Through Connection</span>
+                        </h1>
+
+                        <div className="mt-12 w-full relative">
+                            <img
+                                src={gradient}
+                                alt="Gradient design"
+                                className="absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 z-10"
+                            />
+                            <img
+                                src={heroImgDesktop}
+                                alt="Testimonials from professionals"
+                                className="w-full max-w-3xl h-auto object-contain z-30"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="flex flex-col items-center gap-5 md:hidden">
-                <div className="flex flex-col gap-5">
-                    <h2 className="font-montserrat text-[35px] leading-[35px] flex flex-col tracking-[0.5px] text-[#0D4036]">
+            {/* Mobile */}
+            <div className="container mx-auto md:hidden py-8 px-5">
+                <div className="flex flex-col items-center gap-5">
+                    <h1 className="font-montserrat text-3xl flex flex-col tracking-[0.5px] text-[#0D4036]">
                         <span className="font-extrabold">
                             Gaining Knowledge
                         </span>
                         <span className="">Through Connection</span>
-                    </h2>
-                    <div
-                        className={`relative w-full h-[437.77px] bg-transparent bg-contain bg-no-repeat bg-center`}
-                        style={{backgroundImage: `url(${heroImgMobile})`}}
-                    >
-                        <div className="absolute w-[635.09px] h-[133.71px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#51D790] to-[#2CBC70] blur-[100px] rotate-[32.96deg]"></div>
+                    </h1>
+
+                    {/* Right Column */}
+                    <div className="relative flex flex-col items-start text-left">
+                        <div className="mt-12 w-full relative">
+                            <img
+                                src={heroImgMobile}
+                                alt="Testimonials from professionals"
+                                className="w-full max-w-3xl h-auto object-contain"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Graphics Pattern */}
+                    <div className="md:hidden">
+                        <img
+                            src={heroPatternMobile}
+                            className="w-full max-w-md h-auto object-contain"
+                            alt="Decorative graphic pattern"
+                        />
                     </div>
                 </div>
-
-                <div className="">
-                    <img src={heroPatternMobile} className="" alt="Brand pattern" />
-                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
