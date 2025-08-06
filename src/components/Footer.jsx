@@ -7,6 +7,7 @@ import {
     FacebookIcon,
     InstagramIcon,
     YouTubeIcon,
+    ShortArrow,
 } from "./Icons";
 
 const Footer = () => {
@@ -100,10 +101,10 @@ const Footer = () => {
 
                 {/* Subscription Form */}
                 <div className="flex flex-col gap-5 w-full max-w-sm flex-1">
-                    <h3 className="font-light text-2xl text-white tracking-wider">
+                    <h3 className="font-light text-xl text-white tracking-wider">
                         Subscribe to get Updates
                     </h3>
-                    <form onSubmit={(e) => e.preventDefault()} className="flex">
+                    <form className="flex">
                         <label htmlFor="email-subscribe" className="sr-only">
                             Enter your email
                         </label>
@@ -111,15 +112,25 @@ const Footer = () => {
                             id="email-subscribe"
                             type="email"
                             placeholder="Enter your email"
-                            className="w-full bg-[#0D4036] border-2 border-[#CCED60]/60 rounded-lg p-4 text-white placeholder-white/60 focus:outline-none focus:border-brand-lime transition-colors"
+                            className="hidden md:inline-flex w-full bg-[#0D4036] border-2 border-[#CCED60]/60 rounded-lg p-4 text-white placeholder-white/60 focus:outline-none focus:border-brand-lime transition-colors"
                         />
+
+                        <div className="md:hidden relative">
+                            <input
+                                id="email-subscribe"
+                                type="email"
+                                placeholder="Enter your email"
+                                className="w-full text-[#0D4036] rounded-lg p-4 bg-white placeholder-[#333333] focus:outline-none focus:border-brand-lime transition-colors"
+                            />
+                            <button className="absolute inset-y-0 -ml-2 bg-[#CCED60] p-4 rounded-r-lg"><ShortArrow fill="#0D4036" /></button>
+                        </div>
                     </form>
 
                     <LinkButton
                         href="#"
                         variant="accent"
                         icon
-                        className="self-start"
+                        className="self-start hidden md:flex"
                     >
                         Subscribe
                     </LinkButton>
