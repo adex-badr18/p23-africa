@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 import { ShortArrow } from "./Icons";
 
@@ -13,10 +12,11 @@ import { ShortArrow } from "./Icons";
  */
 const LinkButton = ({
     variant = "primary-dark",
-    href = "/",
+    href = "",
     children,
     icon = false,
     className = "",
+    ...rest
 }) => {
     const baseStyles =
         "flex flex-row items-center justify-center font-sans transition-colors duration-300";
@@ -47,6 +47,7 @@ const LinkButton = ({
         <Link
             to={href}
             className={`${baseStyles} ${styles[variant]} ${className}`}
+            {...rest}
         >
             <span>{children}</span>
             {icon && <ShortArrow fill={iconFillColor} />}

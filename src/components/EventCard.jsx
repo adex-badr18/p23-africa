@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Calendar, ShortArrow, LongArrow } from "./Icons";
+import { eventCardVariantStyles } from "../data";
 
 /**
  * A responsive feature card component.
@@ -21,31 +22,8 @@ const EventCard = ({
     linkUrl = "/",
     className = "",
 }) => {
-    // Define styles based on the variant prop
-    const styles = {
-        light: {
-            cardBg: "bg-white",
-            textColor: "text-[#0D4036]",
-            buttonBg: "bg-white",
-            buttonBorder: "border-[#0D4036]",
-            buttonTextColor: "text-[#0D4036]",
-            iconColor: "#0D4036",
-            linkColor: "text-[#0D4036]",
-            linkArrowColor: "border-[#0D4036]",
-        },
-        dark: {
-            cardBg: "bg-[#0D4036]",
-            textColor: "text-white",
-            buttonBg: "bg-[#0D4036]",
-            buttonBorder: "border-white",
-            buttonTextColor: "text-white",
-            iconColor: "white",
-            linkColor: "text-white",
-            linkArrowColor: "border-white",
-        },
-    };
-
-    const currentStyle = styles[variant];
+    // Get styles based on the variant prop
+    const currentStyle = eventCardVariantStyles[variant];
 
     return (
         <div

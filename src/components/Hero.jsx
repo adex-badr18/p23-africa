@@ -1,7 +1,6 @@
 import heroBgDesktop from "../assets/hero-bg-desktop.png";
 import heroPatternDesktop from "../assets/hero-pattern-desktop.png";
 import heroImgDesktop from "../assets/hero-img-desktop.png";
-import heroBgMobile from "../assets/hero-bg-mobile.png";
 import heroPatternMobile from "../assets/hero-pattern-mobile.png";
 import heroImgMobile from "../assets/hero-img-mobile.png";
 import gradient from "../assets/hero-gradient.png";
@@ -26,14 +25,6 @@ const Hero = () => {
 
                     {/* Right Column */}
                     <div className="relative flex flex-col items-start text-left">
-                        {/* <div
-                            className="absolute top-40 right-20 lg:right-60 w-[500px] h-[500px] lg:w-[600px] lg:h-[500px] bg-green-900 rounded-full blur-xl"
-                            style={{
-                                background:
-                                    "radial-gradient(circle, rgba(204,237,96,0.2) 0%, rgba(204,237,96,0) 60%)",
-                            }}
-                        ></div> */}
-
                         <h1 className="font-montserrat text-4xl lg:text-5xl leading-tig flex flex-col tracking-[0.5px] text-[#0D4036]">
                             <span className="font-extrabold">
                                 Gaining Knowledge

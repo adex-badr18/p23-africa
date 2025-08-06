@@ -1,50 +1,10 @@
-import React from "react";
 import Logo from "./Logo";
 import { Link } from "react-router";
 import LinkButton from "./LinkButton";
-import {
-    LinkedInIcon,
-    FacebookIcon,
-    InstagramIcon,
-    YouTubeIcon,
-    ShortArrow,
-} from "./Icons";
+import { ShortArrow } from "./Icons";
+import { footerData } from "../data";
 
 const Footer = () => {
-    const footerData = {
-        columns: [
-            {
-                title: "Who We Are",
-                links: [
-                    { label: "About Us", href: "#" },
-                    { label: "Business Referral Network", href: "#" },
-                    { label: "University Partnership", href: "#" },
-                    { label: "The 54th Pitch", href: "#" },
-                ],
-            },
-            {
-                title: "What We Do",
-                links: [
-                    { label: "Business Strategy", href: "#" },
-                    { label: "Market Entry", href: "#" },
-                    { label: "Business Research", href: "#" },
-                    { label: "Sales", href: "#" },
-                    { label: "Marketing", href: "#" },
-                    { label: "Business Audit", href: "#" },
-                ],
-            },
-        ],
-        contact: {
-            title: "Contact Us",
-            socials: [
-                { name: "LinkedIn", href: "#", icon: LinkedInIcon },
-                { name: "Facebook", href: "#", icon: FacebookIcon },
-                { name: "Instagram", href: "#", icon: InstagramIcon },
-                { name: "YouTube", href: "#", icon: YouTubeIcon },
-            ],
-        },
-    };
-
     return (
         <footer className="bg-[#0D4036] w-full">
             <div className="container mx-auto p-8 md:p-16 font-walsheim flex flex-col md:flex-row flex-wrap justify-between gap-12">
@@ -122,7 +82,9 @@ const Footer = () => {
                                 placeholder="Enter your email"
                                 className="w-full text-[#0D4036] rounded-lg p-4 bg-white placeholder-[#333333] focus:outline-none focus:border-brand-lime transition-colors"
                             />
-                            <button className="absolute inset-y-0 -ml-2 bg-[#CCED60] p-4 rounded-r-lg"><ShortArrow fill="#0D4036" /></button>
+                            <button className="absolute inset-y-0 -ml-2 bg-[#CCED60] p-4 rounded-r-lg">
+                                <ShortArrow fill="#0D4036" />
+                            </button>
                         </div>
                     </form>
 

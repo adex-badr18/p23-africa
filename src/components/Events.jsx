@@ -12,6 +12,7 @@ const Events = () => {
 
     return (
         <>
+            {/* Desktop View */}
             <div
                 className="hidden md:block bg-[#2D9378] bg-no-repeat bg-cover min-h-screen"
                 style={{ backgroundImage: `url("${eventBg}")` }}
@@ -63,6 +64,7 @@ const Events = () => {
                 </div>
             </div>
 
+            {/* Mobile View of Upcoming event */}
             <div
                 className="md:hidden bg-[#2D9378] bg-no-repeat bg-cover"
                 style={{ backgroundImage: `url("${eventBg}")` }}
@@ -90,6 +92,7 @@ const Events = () => {
                 </div>
             </div>
 
+            {/* Mobile view of event tab component */}
             <div className="md:hidden bg-white py-16">
                 <div className="flex items-center mb-10">
                     {["All Event", "BRN Only"].map((buttonItem, index) => (
@@ -109,8 +112,9 @@ const Events = () => {
                 <div className="px-6">
                     {tabIndex === 1 && (
                         <div className="flex flex-col gap-10">
-                            {Array.from({ length: 5 }).map(() => (
+                            {Array.from({ length: 5 }).map((_, index) => (
                                 <EventCard
+                                    key={index}
                                     variant="dark"
                                     title="Vision & Execution"
                                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -123,8 +127,9 @@ const Events = () => {
 
                     {tabIndex === 2 && (
                         <div className="flex flex-col gap-10">
-                            {Array.from({ length: 5 }).map(() => (
+                            {Array.from({ length: 5 }).map((_, index) => (
                                 <EventCard
+                                    key={index}
                                     variant="light"
                                     title="Vision & Execution"
                                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

@@ -1,35 +1,9 @@
-import React, { useState } from "react";
-import {
-    LinkedInIcon,
-    FacebookIcon,
-    InstagramIcon,
-    YouTubeIcon,
-    Hamburger,
-    CloseIcon,
-} from "./Icons";
+import { useState } from "react";
+import { Hamburger, CloseIcon } from "./Icons";
 import Logo from "./Logo";
 import { Link, NavLink } from "react-router";
 import LinkButton from "./LinkButton";
-
-const navLinks = [
-    { id: 1, text: "Who We Are", url: "/" },
-    { id: 2, text: "What We Do", url: "/" },
-    { id: 3, text: "Our Events", url: "/" },
-    { id: 4, text: "Resource Hub", url: "/" },
-    { id: 5, text: "Let’s Collaborate", url: "/" },
-];
-
-const socialIcons = [
-    {
-        id: 1,
-        name: "linkedin",
-        url: "#",
-        icon: LinkedInIcon,
-    },
-    { id: 2, name: "facebook", url: "#", icon: FacebookIcon },
-    { id: 3, name: "instagram", url: "#", icon: InstagramIcon },
-    { id: 4, name: "youtube", url: "#", icon: YouTubeIcon },
-];
+import { navLinks, socialIcons } from "../data";
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
